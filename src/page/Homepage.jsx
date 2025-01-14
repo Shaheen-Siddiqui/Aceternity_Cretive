@@ -7,7 +7,7 @@ import { WobbleCardDemo } from "../component/wobble-card.jsx";
 import {
   IndustryCards, ShowCaseCart,
   ServiceCards
-} from "../component/Cards";
+} from "../component/cards";
 import { BackgroundBeamsWithCollisionDemo } from "../component/footer-background-lines";
 
 export function VortexDemo() {
