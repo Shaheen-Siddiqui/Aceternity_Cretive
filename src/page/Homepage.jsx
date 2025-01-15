@@ -9,6 +9,10 @@ import {
   ServiceCards
 } from "../component/cards";
 import { BackgroundBeamsWithCollisionDemo } from "../component/footer-background-lines";
+import { Link } from "react-router-dom"
+////----------------------------
+
+
 
 export function VortexDemo() {
   return (
@@ -31,13 +35,16 @@ export function VortexDemo() {
               Best Leading Website Design and Development Agency in Delhi NCR
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-9 mt-9 w-full justify-center">
-              <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg transition-transform transform active:scale-95">
-                <span className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 blur-sm animate-shimmer"></span>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 opacity-30"></span>
-                <span className="relative">Enquire Now</span>
-              </button>
-            </div>
+            <Link to="/query">
+              <div className="flex flex-col sm:flex-row items-center gap-9 mt-9 w-full justify-center">
+                <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg transition-transform transform active:scale-95">
+                  <span className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 blur-sm animate-shimmer"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 opacity-30"></span>
+                  <span className="relative">Enquire Now</span>
+                </button>
+              </div>
+            </Link>
+
           </div>
         </Vortex>
 

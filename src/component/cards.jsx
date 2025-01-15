@@ -104,7 +104,7 @@ function DigitalToolkit(service) {
   return (
     <div
       key={service.name}
-      className="animate-pulse bg-gray-500 group block w-48 h-60 mx-auto rounded-lg p-4 bg-half-white ring-1 ring-dark-gray shadow-lg transition-all duration-500 animate-fadeIn"
+      className="animate-pulse bg-gray-600 group block w-48 h-60 mx-auto rounded-lg p-4 bg-half-white ring-1 ring-dark-gray shadow-lg transition-all duration-500"
     >
       <div className="flex flex-col items-center text-white space-y-4 transform transition-all hover:scale-105">
         <div className="bg-gradient-to-r from-secondary-blue to-primary-blue p-4 rounded-full shadow-lg">

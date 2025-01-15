@@ -1,13 +1,18 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import { VortexDemo } from "./page/Homepage";
-import {  BackgroundBeamsWithCollisionDemo} from "./component/footer-background-lines";
+import { CustomForm } from "./page/Query";
 
 function App() {
   return (
-    <>
-      < VortexDemo />
-      {/* <BackgroundBeamsWithCollisionDemo/> */}
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<VortexDemo />} />
+        <Route path="/query" element={<CustomForm />} />
+      </Routes>
+    </Router>
+  );
 }
-export default App
+
+export default App;
