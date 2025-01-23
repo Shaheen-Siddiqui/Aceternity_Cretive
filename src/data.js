@@ -49,7 +49,6 @@ export const ourProject = [
   {
     image: 'https://i.ibb.co/MnpVnvF/img1.webp'
   },
-
   {
     image: 'https://i.ibb.co/TrBdZS2/img-3.webp'
   },

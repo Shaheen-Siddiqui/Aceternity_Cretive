@@ -232,25 +232,23 @@ const Explosion = ({
 export function BackgroundBeamsWithCollisionDemo() {
     return (
         (<BackgroundBeamsWithCollision>
-            <div className="flex gap-3">
+            {/* <div className="flex gap-3">
 
 
 
                 <Link to='/query' className="cursor-pointer p-9 relative text-center bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
                     <span
                         className="text-3xl md:text-5xl font-bold leading-tight transition-transform transform scale-110 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-purple-500">
-                        Enquire Now
+                        Book a Free Appointment
                     </span>
                     <div
                         className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 opacity-100 transition-opacity duration-500 rounded-lg"></div>
                 </Link>
 
 
-                {/* --- */}
                 <footer className="bg-black p-9">
                     <div className="container mx-auto text-center">
                         <div className="flex justify-center space-x-6">
-                            {/* Social Media Links */}
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 transition duration-300">
                                 < Facebook fontSize="large" />
                             </a>
@@ -267,7 +265,89 @@ export function BackgroundBeamsWithCollisionDemo() {
                         </div>
                     </div>
                 </footer>
+            </div> */}
+            <div className="flex flex-col gap-3">
+
+                <Link
+                    to="/query"
+                    className="cursor-pointer p-9 relative text-center bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4"
+                >
+                    <span
+                        className="text-3xl md:text-5xl font-bold leading-tight transition-transform transform scale-110 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-purple-500"
+                    >
+                        Book a Free Appointment
+                    </span>
+                    <div
+                        className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 opacity-100 transition-opacity duration-500 rounded-lg"
+                    ></div>
+                </Link>
+
+                {/* Footer Section */}
+                <footer className="bg-black p-9">
+                    <div className="container mx-auto text-center space-y-6">
+                        <div className="flex justify-center space-x-6">
+                            {/* Social Media Links */}
+                            <a
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-blue-500 transition duration-300"
+                            >
+                                <Facebook fontSize="large" />
+                            </a>
+                            <a
+                                href="https://twitter.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-blue-400 transition duration-300"
+                            >
+                                <Twitter fontSize="large" />
+                            </a>
+                            <a
+                                href="https://linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-blue-700 transition duration-300"
+                            >
+                                <LinkedIn fontSize="large" />
+                            </a>
+                            <a
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-pink-500 transition duration-300"
+                            >
+                                <Instagram fontSize="large" />
+                            </a>
+                        </div>
+
+                        {/* Disclaimer, Privacy Policy, and Terms Links */}
+                        <div className="border-t border-gray-700 pt-6">
+                            <div className="flex justify-center space-x-4">
+                                <Link
+                                    to="/disclaimer"
+                                    className="text-gray-400 hover:text-white transition duration-300"
+                                >
+                                    Disclaimer
+                                </Link>
+                                <Link
+                                    to="/privacy-policy"
+                                    className="text-gray-400 hover:text-white transition duration-300"
+                                >
+                                    Privacy Policy
+                                </Link>
+                                <Link
+                                    to="/terms-and-conditions"
+                                    className="text-gray-400 hover:text-white transition duration-300"
+                                >
+                                    Terms & Conditions
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
+
         </BackgroundBeamsWithCollision>)
 
 

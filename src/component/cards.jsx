@@ -17,7 +17,7 @@ const digitalToolkit = [
   { icon: <WebIcon fontSize="large" />, name: "Website Development" },
   { icon: <BrushIcon fontSize="large" />, name: "Logo Designing" },
   { icon: <BrushIcon fontSize="large" />, name: "Graphic Designing" },
-  { icon: <GroupIcon fontSize="large" />, name: "Viral Marketing" },
+  { icon: <GroupIcon fontSize="large" />, name: "Digital Marketing" },
   { icon: <StarIcon fontSize="large" />, name: "Influencer Marketing" },
   { icon: <SourceIcon fontSize="large" />, name: "Content Writing" },
   { icon: <ThumbUpIcon fontSize="large" />, name: "Google/Facebook Reviews" },
@@ -84,8 +84,7 @@ export const IndustryCards = () => {
         IndustryName.map(({ industriesName }, index) => {
           return <>
             <div className="relative w-24 h-24 transform rotate-45 flex mt-[3rem]">
-              <div className="absolute top-0 left-0 bg-blue-500 w-full h-full rounded-lg shadow-lg"></div>
-              <div className="absolute top-5/8 left-5/8 bg-white w-1/4 h-1/4 rounded-lg"></div>
+              <div className="absolute top-5/5 left-5/5 bg-white w-1/4 h-1/4 rounded-lg"></div>
             </div>
             <p className="text-center text-white font-bold text-4xl" style={{ "textShadow": "4px 4px 6px rgba(171, 149, 149, 0.5)" }}>
               {industriesName}
@@ -103,24 +102,24 @@ export const IndustryCards = () => {
 function DigitalToolkit(service) {
   return (
     <div
-      key={service.name}
-      className="animate-pulse bg-gray-600 group block w-48 h-60 mx-auto rounded-lg p-4 bg-half-white ring-1 ring-dark-gray shadow-lg transition-all duration-500"
-    >
-      <div className="flex flex-col items-center text-white space-y-4 transform transition-all hover:scale-105">
-        <div className="bg-gradient-to-r from-secondary-blue to-primary-blue p-4 rounded-full shadow-lg">
-          {service.icon}
-        </div>
-        <p
-          className="text-center text-lg font-bold text-white animate-fadeIn"
-          style={{
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7), 4px 4px 8px rgba(255, 255, 255, 0.3)",
-          }}
-        >
-          {service.name}
-        </p>
-
+    key={service.name}
+    className="animate-pulse bg-dark-gray group block w-48 h-60 mx-auto rounded-lg p-4 bg-half-white ring-1 ring-secondary-blue shadow-lg transition-all duration-500"
+  >
+    <div className="flex flex-col items-center text-white space-y-4 transform transition-all hover:scale-105">
+      <div className="bg-gradient-to-r from-secondary-blue to-primary-blue p-4 rounded-full shadow-lg">
+        {service.icon}
       </div>
+      <p
+        className="text-center text-lg font-bold text-white animate-fadeIn"
+        style={{
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 123, 255, 0.2)", // Adjusted to match the blue palette
+        }}
+      >
+        {service.name}
+      </p>
     </div>
+  </div>
+  
   );
 }
 

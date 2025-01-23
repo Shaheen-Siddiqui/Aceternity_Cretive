@@ -21,26 +21,28 @@ export function VortexDemo() {
         <Vortex
 
           backgroundColor="black"
-          className="flex items-center flex-col justify-center px-2 md:px-10  py-4 h-full overflow-hidden"
+          className="flex items-center flex-col justify-center  h-full overflow-hidden"
         >
-          <div className="mt-[8rem]">
+          <div className="mt-[5rem]">
 
-            <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 
-    shadow-xl shadow-white/50 hover:scale-105 transition-transform duration-300
-    text-2xl md:text-4xl lg:text-8xl font-bold">
-              Micro Sonic
-            </h2>
 
-            <p className="text-white text-sm md:text-lg lg:text-3xl max-w-xl mt-3 text-center font-bold">
-              Best Leading Website Design and Development Agency in Delhi NCR
-            </p>
+            <h3 className="text-center md:text-3xl lg:text-4xl font-bold text-secondary-blue p-7">
+              MICRO SONIC
+            </h3>
+
+            <h3 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 
+    shadow-xl shadow-white/50 hover:scale-100 transition-transform duration-300
+    text-2xl md:text-4xl lg:text-5xl font-bold p-7  ">
+              Best Leading <br /> Website Design and Development <br />Agency
+
+            </h3>
+
+
 
             <Link to="/query">
               <div className="flex flex-col sm:flex-row items-center gap-9 mt-9 w-full justify-center">
-                <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg transition-transform transform active:scale-95">
-                  <span className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 blur-sm animate-shimmer"></span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 opacity-30"></span>
-                  <span className="relative">Enquire Now</span>
+                <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-white text-blue px-6 py-3 font-semibold">
+                  <span className="relative">Book a Free Appointment</span>
                 </button>
               </div>
             </Link>
