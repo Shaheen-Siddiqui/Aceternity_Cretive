@@ -66,13 +66,15 @@ export function VortexDemo() {
           </motion.div>
           <br />
           <ServiceCards />
+          <br />
+          <IndustryCards />
+
 
           <br />
           <WobbleCardDemo />
           <ShowCaseCart />
 
           <br />
-          <IndustryCards />
           <FocusCards />
           <BackgroundBeamsWithCollisionDemo />
         </AuroraBackground>
