@@ -25,6 +25,7 @@ const digitalToolkit = [
   { icon: <PrintIcon fontSize="large" />, name: "Printing" },
 ];
 
+
 export const ShowCaseCart = () => {
   return (
     <>
@@ -35,38 +36,74 @@ export const ShowCaseCart = () => {
       </h2>
       <p className="text-center text-2xl md:text-2xl mb-3 text-text-light">Helping clients around the world to
         launch their businesses</p>
-      <div className="flex gap-[3.7rem] flex-wrap">
+
+      <div className="flex flex-wrap gap-4 sm:gap-[3.7rem] justify-center">
         {
           brandData.map(({ image, name }, index) => {
-            return (<div key={index} className="group block max-w-xs mx-auto rounded-lg p-6 bg-half-white ring-1 ring-dark-gray shadow-lg transition duration-100 hover:ring-4 hover:ring-secondary-blue hover:scale-105">
-              <div className="group relative overflow-hidden rounded-lg shadow-lg bg-dark-gray hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                <img
-                  src={image} // Replace with the brand's image URL
-                  alt="Brand Logo"
-                  className="w-full h-20 object-contain bg-half-white"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-gray via-transparent to-dark-gray opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-4">
-
+            return (
+              <div
+                key={index}
+                className="group block w-full sm:w-auto max-w-xs mx-auto rounded-lg p-6 bg-half-white ring-1 ring-dark-gray shadow-lg transition duration-100 hover:ring-4 hover:ring-secondary-blue hover:scale-105"
+              >
+                <div className="relative overflow-hidden rounded-lg shadow-lg bg-dark-gray hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                  <img
+                    src={image}
+                    alt={name}
+                    className="w-full h-20 object-contain bg-half-white"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-gray via-transparent to-dark-gray opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-4">
+                    {/* Additional content (e.g., title) can go here */}
+                  </div>
                 </div>
               </div>
-
-            </div>)
+            );
           })
         }
-
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-[4rem] mt-[4rem]">
-        {ourProject.map(({ image }, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-lg shadow-md h-[350px] w-[300px] group"
-          >
-            <img
-              src={image}
-              alt="Long Image"
-              className="cursor-pointer absolute top-0 left-0 w-full transition-transform duration-500 group-hover:translate-y-[-65%]"
-            />
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[4rem] mt-[4rem] mb-20">
+          {ourProject.map(({ image }, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-lg shadow-md h-[350px] w-[300px] group"
+            >
+              <img
+                src={image}
+                alt="Long Image"
+                className="cursor-pointer absolute top-0 left-0 w-full transition-transform duration-500 group-hover:translate-y-[-65%]"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </>
+  );
+};
+
+export const IndustryPonits = () => {
+  return (
+    <>
+      <h2 className="text-center text-xl md:text-2xl lg:text-4xl font-bold tracking-tight text-white leading-snug mt-12 mx-4">
+        <span className="text-secondary-blue"> Industries We Worked For </span>
+      </h2>
+      <div className="flex flex-wrap gap-8 justify-center mt-10 px-4">
+        {IndustryName.map(({ industriesName }, index) => (
+          <div key={index} className="flex flex-col items-center">
+            {/* Rotated Square */}
+            <div className="relative w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 transform rotate-45 flex">
+              <div className="absolute inset-0 bg-white rounded-lg"></div>
+            </div>
+            {/* Industry Name */}
+            <p
+              className="text-center text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-4"
+              style={{
+                textShadow: "4px 4px 6px rgba(171, 149, 149, 0.5)",
+              }}
+            >
+              {industriesName}
+            </p>
           </div>
         ))}
       </div>
@@ -74,64 +111,37 @@ export const ShowCaseCart = () => {
   );
 };
 
-export const IndustryCards = () => {
-  return <>
-    <h2 className="text-center text-xl md:text-2xl lg:text-4xl font-bold tracking-tight text-white leading-snug mt-12 mx-4">
-      <span className="text-secondary-blue"> Industries We Worked for </span>
-    </h2>
-    <div className="flex flex-wrap gap-6 justify-center mt-8 px-4">
-      {IndustryName.map(({ industriesName }, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <div className="relative w-2 h-2 md:w-6 md:h-6 transform rotate-45 flex">
-            <div className="absolute inset-0 bg-white rounded-lg"></div>
-          </div>
-          <p
-            className="text-center text-white font-bold text-lg md:text-xl lg:text-2xl mt-4"
-            style={{
-              textShadow: "4px 4px 6px rgba(171, 149, 149, 0.5)",
-            }}
-          >
-            {industriesName}
-          </p>
-        </div>
-      ))}
-    </div>
-
-  </>
-}
-
 
 function DigitalToolkit(service) {
   return (
     <div
       key={service.name}
-      className="animate-pulse bg-dark-gray group block w-48 h-60 mx-auto rounded-lg p-4 bg-half-white ring-1 ring-secondary-blue shadow-lg transition-all duration-500"
+      className="animate-pulse bg-dark-gray group block w-36 h-48 sm:w-40 sm:h-52 md:w-48 md:h-60 mx-auto rounded-lg p-3 sm:p-4 bg-half-white ring-1 ring-secondary-blue shadow-lg transition-all duration-500"
     >
-      <div className="flex flex-col items-center text-white space-y-4 transform transition-all hover:scale-105">
-        <div className="bg-gradient-to-r from-secondary-blue to-primary-blue p-4 rounded-full shadow-lg">
+      <div className="flex flex-col items-center text-white space-y-3 sm:space-y-4 transform transition-all hover:scale-105">
+        <div className="bg-gradient-to-r from-secondary-blue to-primary-blue p-3 sm:p-4 rounded-full shadow-lg">
           {service.icon}
         </div>
         <p
-          className="text-center text-lg font-bold text-white animate-fadeIn"
+          className="text-center text-sm sm:text-base md:text-lg font-bold text-white animate-fadeIn"
           style={{
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 123, 255, 0.2)", // Adjusted to match the blue palette
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 123, 255, 0.2)",
           }}
         >
           {service.name}
         </p>
       </div>
     </div>
-
   );
 }
 
 export function ServiceCards() {
   return (
     <>
-      <h2 className="text-center text-2xl md:text-2xl lg:text-4xl font-bold tracking-tight text-white leading-snug mt-[3rem] m-5">
+      <h2 className="text-center text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight text-white leading-snug mt-12 mx-5">
         <span className="text-secondary-blue"> Our Digital Toolkit </span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4 mt-5">
         {digitalToolkit.map(DigitalToolkit)}
       </div>
     </>

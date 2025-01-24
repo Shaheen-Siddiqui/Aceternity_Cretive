@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FocusCards } from "../component/focus-cards.jsx";
 import { WobbleCardDemo } from "../component/wobble-card.jsx";
 import {
-  IndustryCards, ShowCaseCart,
+  IndustryPonits, ShowCaseCart,
   ServiceCards
 } from "../component/cards";
 import { BackgroundBeamsWithCollisionDemo } from "../component/footer-background-lines";
@@ -67,15 +67,16 @@ export function VortexDemo() {
           <br />
           <ServiceCards />
           <br />
-          <IndustryCards />
+          <IndustryPonits />
 
 
           <br />
           <WobbleCardDemo />
-          <ShowCaseCart />
+          <div>
 
-          <br />
+          <ShowCaseCart />
           <FocusCards />
+          </div>
           <BackgroundBeamsWithCollisionDemo />
         </AuroraBackground>
       </div>

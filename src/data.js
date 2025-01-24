@@ -77,3 +77,32 @@ export const IndustryName = [
 ];
 
 
+// <BackgroundLines className=' flex justify-center '>
+//   <form ref={formRef} onSubmit={handleSubmit} className="flex justify-center">
+
+//     <div className="flex flex-col p-10 gap-2.5  w-[35rem]">
+
+//       <Label className="text-1xl" htmlFor="fullname">Full Name</Label>
+//       <Input required className="text-1xl" name="fullname" type="text" id="fullname" placeholder="Enter your Full Name" />
+
+//       <Label className="text-1xl" htmlFor="email">Business Email</Label>
+//       <Input required className="text-1xl" name="email" type="email" id="email" placeholder="Enter your Business Email" />
+
+//       <Label className="text-1xl" htmlFor="phone"> Phone Number</Label>
+//       <Input required className="text-1xl" name="phone" type="phone" id="phone" placeholder="Enter your Phone Number" />
+
+//       <Label className="text-1xl" htmlFor="company_name">Company Name</Label>
+//       <Input required className="text-1xl" name="company" type="company_name" id="company_name" placeholder="Enter your Company Name" />
+
+//       <Label className="text-1xl" htmlFor="social">Social Media Link</Label>
+//       <Input className="text-1xl" name="socialMedia" type="social" id="social" placeholder="Enter Your Any Social Media Link" />
+
+//       <Label className="text-1xl" htmlFor="details">Addition Details</Label>
+//       <Textarea type="details" id="details" name="details" placeholder="Enter Detail" />
+
+//       <div className="mt-4"><Button type="submit" className="w-full">  Submit</Button>
+
+//       </div>
+//     </div>
+//   </form>
+// </BackgroundLines>
