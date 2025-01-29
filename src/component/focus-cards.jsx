@@ -39,7 +39,7 @@ export function FocusCards() {
     <>
       <u>
         <h2
-          className="text-center text-white text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] m-12"
+          className="text-center text-primary-blue text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] m-12"
           style={{
             textShadow:
               "2px 2px 4px rgba(95, 73, 73, 0.7), 0px 0px 10px rgba(255, 255, 255, 0.6)",
@@ -49,19 +49,20 @@ export function FocusCards() {
         </h2>
       </u>
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 max-w-7xl px-4 md:px-8 mx-auto w-full mt-10"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[90rem] px-4 md:px-8 mx-auto  mt-10"
       >
         {cards.map((card, index) => (
           <Card
             key={index}
             keys={card.title}
-            card={card}
+            card={{ ...card, minHeight: "h-[100px]" }} 
             index={index}
             hovered={hovered}
             setHovered={setHovered}
           />
         ))}
       </div>
+
     </>
   );
 }

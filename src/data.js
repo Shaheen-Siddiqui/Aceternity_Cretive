@@ -61,48 +61,147 @@ export const ourProject = [
 
 ]
 
-export const IndustryName = [
-  { industriesName: "E-commerce" },
-  { industriesName: "Fashion" },
-  { industriesName: "Sports" },
-  { industriesName: "Packaging" },
-  { industriesName: "Food" },
-  { industriesName: "Automobile" },
-  { industriesName: "Travel" },
-  { industriesName: "Beauty" },
-  { industriesName: "Trading" },
-  { industriesName: "Blogging" },
-  { industriesName: "SaaS" },
-  { industriesName: "Retail" }
-];
 
 
-// <BackgroundLines className=' flex justify-center '>
-//   <form ref={formRef} onSubmit={handleSubmit} className="flex justify-center">
-
-//     <div className="flex flex-col p-10 gap-2.5  w-[35rem]">
-
-//       <Label className="text-1xl" htmlFor="fullname">Full Name</Label>
-//       <Input required className="text-1xl" name="fullname" type="text" id="fullname" placeholder="Enter your Full Name" />
-
-//       <Label className="text-1xl" htmlFor="email">Business Email</Label>
-//       <Input required className="text-1xl" name="email" type="email" id="email" placeholder="Enter your Business Email" />
-
-//       <Label className="text-1xl" htmlFor="phone"> Phone Number</Label>
-//       <Input required className="text-1xl" name="phone" type="phone" id="phone" placeholder="Enter your Phone Number" />
-
-//       <Label className="text-1xl" htmlFor="company_name">Company Name</Label>
-//       <Input required className="text-1xl" name="company" type="company_name" id="company_name" placeholder="Enter your Company Name" />
-
-//       <Label className="text-1xl" htmlFor="social">Social Media Link</Label>
-//       <Input className="text-1xl" name="socialMedia" type="social" id="social" placeholder="Enter Your Any Social Media Link" />
-
-//       <Label className="text-1xl" htmlFor="details">Addition Details</Label>
-//       <Textarea type="details" id="details" name="details" placeholder="Enter Detail" />
-
-//       <div className="mt-4"><Button type="submit" className="w-full">  Submit</Button>
-
-//       </div>
-//     </div>
-//   </form>
-// </BackgroundLines>
+export const content = {
+  "Social Media Marketing": {
+    title: "📢 Social Media Marketing",
+    description: "Maximize your brand’s reach with our strategic social media marketing services. We help you grow your audience, increase engagement, and drive conversions through targeted campaigns.",
+    benefits: [
+      "✅ Increased Brand Awareness",
+      "✅ Higher Engagement & Interaction",
+      "✅ Targeted Advertising for More Conversions",
+      "✅ Data-Driven Strategies for Optimal Performance",
+      "✅ Competitive Edge with Latest Social Media Trends",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "right",
+  },
+  "Website Development": {
+    title: "🌍 Website Development",
+    description: "Your website is your digital storefront. We create high-performance, responsive, and visually appealing websites that enhance user experience and drive business growth.",
+    benefits: [
+      "✅ Mobile-Friendly & Fast Loading",
+      "✅ SEO-Optimized for Higher Ranking",
+      "✅ Secure & Scalable Development",
+      "✅ Custom Designs Tailored to Your Brand",
+      "✅ E-commerce & CMS Solutions Available",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "left",
+  },
+  "Logo Designing": {
+    title: "🎨 Logo Designing",
+    description: "Your logo is your brand’s identity. We design unique, memorable, and professional logos that establish a strong brand presence.",
+    benefits: [
+      "✅ Custom & Unique Logo Concepts",
+      "✅ High-Quality Vector Files",
+      "✅ Multiple Revisions Until Perfection",
+      "✅ Brand-Consistent Color Palette",
+      "✅ Logo Variations for All Use Cases",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "right",
+  },
+  "Graphic Designing": {
+    title: "🖌 Graphic Designing",
+    description: "From social media creatives to brochures, we craft stunning visuals that captivate your audience and elevate your brand.",
+    benefits: [
+      "✅ Creative & Unique Designs",
+      "✅ High-Quality Graphics for Print & Digital",
+      "✅ Engaging Social Media Visuals",
+      "✅ Infographics & Illustrations",
+      "✅ Brand-Aligned Design Elements",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "left",
+  },
+  "Digital Marketing": {
+    title: "🚀 Digital Marketing",
+    description: "We create data-driven marketing campaigns that boost your online presence and maximize ROI.",
+    benefits: [
+      "✅ Google & Facebook Ads Management",
+      "✅ Email & SMS Marketing Campaigns",
+      "✅ PPC, SEO & Content Marketing",
+      "✅ Lead Generation Strategies",
+      "✅ Conversion Rate Optimization",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "right",
+  },
+  "Influencer Marketing": {
+    title: "⭐ Influencer Marketing",
+    description: "Leverage the power of influencers to promote your brand and drive authentic engagement.",
+    benefits: [
+      "✅ Collaborate with Industry Experts",
+      "✅ Genuine & Organic Audience Reach",
+      "✅ Product Promotions with Trusted Voices",
+      "✅ Micro & Macro Influencer Strategies",
+      "✅ Measurable Campaign Performance",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "left",
+  },
+  "Content Writing": {
+    title: "✍️ Content Writing",
+    description: "Engage your audience with compelling, SEO-friendly content that drives traffic and conversions.",
+    benefits: [
+      "✅ Blog & Article Writing",
+      "✅ Website & Landing Page Content",
+      "✅ SEO-Optimized Copywriting",
+      "✅ Social Media & Ad Copies",
+      "✅ Professional & Persuasive Tone",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "right",
+  },
+  "Google/Facebook Reviews": {
+    title: "👍 Google/Facebook Reviews",
+    description: "Boost your brand’s credibility with authentic customer reviews on major platforms.",
+    benefits: [
+      "✅ Improve Online Reputation",
+      "✅ Build Customer Trust & Loyalty",
+      "✅ Increase Business Visibility",
+      "✅ Encourage Positive Feedback",
+      "✅ Manage & Respond to Reviews Efficiently",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "left",
+  },
+  "Search Engine Optimization": {
+    title: "🔍 Search Engine Optimization (SEO)",
+    description: "Rank higher on Google and drive organic traffic with our proven SEO strategies.",
+    benefits: [
+      "✅ Keyword Optimization for Top Rankings",
+      "✅ On-Page & Off-Page SEO",
+      "✅ Link Building & Technical SEO",
+      "✅ Local SEO for Small Businesses",
+      "✅ Continuous Performance Monitoring",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "right",
+  },
+  "Printing": {
+    title: "🖨️ Printing Services",
+    description: "From business cards to banners, we provide high-quality printing solutions tailored to your needs.",
+    benefits: [
+      "✅ Custom Business Cards & Flyers",
+      "✅ Brochures, Posters & Banners",
+      "✅ High-Quality Printing Materials",
+      "✅ Bulk Printing for Businesses",
+      "✅ Affordable Pricing & Quick Turnaround",
+    ],
+    image:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
+    imagePosition: "left",
+  },
+};
