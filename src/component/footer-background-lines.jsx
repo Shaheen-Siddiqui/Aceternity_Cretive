@@ -231,7 +231,7 @@ const Explosion = ({
 
 export function BackgroundBeamsWithCollisionDemo() {
     return (
-        <BackgroundBeamsWithCollision className="relative">
+        <BackgroundBeamsWithCollision className="relative mt-5">
             <div className="flex flex-col gap-3 min-h-screen">
                 {/* Main Content */}
                 <div className="flex-1 flex justify-center items-center p-6">
@@ -290,6 +290,10 @@ export function BackgroundBeamsWithCollisionDemo() {
                                 <Link to="/disclaimer" className="text-gray-400 hover:text-white transition duration-300">
                                     Disclaimer
                                 </Link>
+                                <Link to="/about" className="text-gray-400 hover:text-white transition duration-300">
+                                    About
+                                </Link>
+
                                 <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition duration-300">
                                     Privacy Policy
                                 </Link>

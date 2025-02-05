@@ -46,11 +46,13 @@ export const HeroSection = () => {
 
   return (
     <>
-      <Vortex
-        backgroundColor="black"
-        className="w-full h-screen overflow-hidden flex items-center flex-col justify-center text-white text-center px-4"
-      >
-        {/* Typing Animation for Headline */}
+    <Vortex
+      backgroundColor="black"
+      className="w-full h-screen overflow-hidden flex flex-col justify-between text-white text-center px-4"
+    >
+      {/* Top Content: Headline and Subheadline */}
+      {/* Adjust padding top so it doesn't go behind the navbar */}
+      <div className="pt-24 md:pt-[22rem]">
         <motion.h1
           className="text-4xl md:text-5xl font-bold"
           key={textIndex} // Key will trigger re-mount and animation reset
@@ -63,31 +65,45 @@ export const HeroSection = () => {
           {texts[textIndex]}
         </motion.h1>
 
-        {/* Subheadline */}
         <motion.p
-          className="text-lg md:text-2xl mt-4"
+          className="text-lg md:text-4xl mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
         >
           {displayText}
         </motion.p>
+      </div>
+
+      {/* Bottom Content: Contact Text and Button */}
+      <div className="mb-8">
         <motion.p
-          className="text-lg md:text-1xl mt-7 text-gray-400 transition"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className="text-lg md:text-xl mt-7 text-gray-400 transition"
+          variants={{
+            hidden: { opacity: 0, y: 20, scale: 0.95, letterSpacing: "normal" },
+            visible: {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              letterSpacing: "0.05em",
+              transition: { duration: 1, delay: 0.5, ease: "easeOut" },
+            },
+          }}
+          initial="hidden"
+          animate="visible"
         >
           Get in Touch with Micro Sonic Today! <br />
           Have a question or ready to start your project? We're here to help!
         </motion.p>
 
         <Link to="/query">
-          <button className="mt-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300 focus:outline-none">
+          <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300 focus:outline-none mt-8">
             Book a Free Appointment
           </button>
         </Link>
-      </Vortex>
+      </div>
+    </Vortex>
+
     </>
   );
 };

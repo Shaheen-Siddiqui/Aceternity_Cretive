@@ -186,22 +186,20 @@ export const IndustryPonits = () => {
 export function ServiceCards() {
   return (
     <>
-      <h2 className="text-center text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight text-white leading-snug">
+      <h2 className="mt-8 sm:mt-10 text-center text-xl sm:text-2xl lg:text-4xl font-bold tracking-tight text-white leading-snug">
         <span className="text-secondary-blue">Our Digital Toolkit</span>
       </h2>
-
+  
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 px-4 m-4 pb-5">
         {digitalToolkit.map((service, index) => (
           <div key={service.name}>
-            <DigitalToolkit
-              service={service}
-              id={`service-${index}`}
-            />
+            <DigitalToolkit service={service} id={`service-${index}`} />
           </div>
         ))}
       </div>
     </>
   );
+  
 }
 
 function DigitalToolkit({ service, id }) {
