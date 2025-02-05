@@ -11,7 +11,14 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
       hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
     )}
   >
-    <p className="absolute inset-0 m-6 text-sm md:text-base font-medium text-blue opacity-80 transition-all duration-300 transform group-hover:opacity-100">
+    <p
+      className={cn(
+        "absolute inset-0 m-6 text-sm md:text-base transition-all duration-300 transform",
+        hovered === index
+          ? "font-bold text-white" // full white with drop shadow
+          : "font-medium text-blue opacity-80"
+      )}
+    >
       {card.text}
     </p>
 
@@ -21,15 +28,12 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
         hovered === index ? "opacity-100" : "opacity-0"
       )}
     >
-      <div className="text-lg md:text-xl lg:text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-b from-indigo-500 to-blue-500 transform scale-110 transition-all duration-300">
-        {card.name}
-        <div className="mt-2 text-yellow-400">⭐⭐⭐</div>
-      </div>
     </div>
   </div>
 ));
 
 Card.displayName = "Card";
+
 
 
 export function FocusCards() {
@@ -55,7 +59,7 @@ export function FocusCards() {
           <Card
             key={index}
             keys={card.title}
-            card={{ ...card, minHeight: "h-[100px]" }} 
+            card={{ ...card, minHeight: "h-[100px]" }}
             index={index}
             hovered={hovered}
             setHovered={setHovered}
